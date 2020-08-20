@@ -3,16 +3,19 @@
 {% load static %}
 <br><br><br>
 <div class="feeds">
+	{% if results %}
+		{% for result in results %}
+			<h3>{{result.title}}</h3>
+			<br>
+			Name:{{result.author}}
+			<br>
+			<p id="{{result.id}}">
+				{{result.body}}
+			</p>
+			<hr>
+		{% endfor %}
+
+	{% endif %}
 	
-	{% for result in results %}
-		<h3>{{result.title}}</h3>
-		<br>
-		Name:{{result.author}}
-		<br>
-		<p id="{{result.id}}">
-			{{result.body}}
-		</p>
-		<hr>
-	{% endfor %}
 </div>
 {% endblock %}
