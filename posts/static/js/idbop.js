@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:8000/getdata').then(function(response){
+fetch('ancient-brook-82501.herokuapp.com/getdata').then(function(response){
   return response.json();
  }).then(function(jsondata){
   console.log(jsondata);
@@ -8,7 +8,7 @@ fetch('http://127.0.0.1:8000/getdata').then(function(response){
     upgradeDb.createObjectStore('feeds',{keyPath:'pk'});
    });
 
-fetch('http://127.0.0.1:8000/getdata').then(function(response){
+fetch('ancient-brook-82501.herokuapp.com/getdata').then(function(response){
   return response.json();
  }).then(function(jsondata){
   dbPromise.then(function(db){
@@ -22,7 +22,7 @@ fetch('http://127.0.0.1:8000/getdata').then(function(response){
   });
  });
 
-/* var post="";
+var post="";
  dbPromise.then(function(db){
   var tx = db.transaction('feeds', 'readonly');
     var feedsStore = tx.objectStore('feeds');
@@ -50,4 +50,4 @@ fetch('http://127.0.0.1:8000/getdata').then(function(response){
        }
       }
     return cursor.continue().then(logItems);
-  });*/
+  });
