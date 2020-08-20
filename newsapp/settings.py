@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 # Setting DJANGO_SECRET_KEY and restarting ⬢ ancient-brook-82501... done, v6
 # DJANGO_SECRET_KEY: 'cg#p$g+j9tax!#a3cup@1$8obt2_+
 # 'k3q+pmu)5%asj6yjpkag'' is not recognized as an internal or external command,
-operable program or batch file.
+# operable program or batch file.
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
