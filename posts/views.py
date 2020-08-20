@@ -10,7 +10,7 @@ def index(request):
 	context={
 		'results':results,
 	}
-	print(context)
+	# print(context)
 	return render(request,template,context)
 
 def base_layout(request):
