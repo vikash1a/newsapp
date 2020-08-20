@@ -1,4 +1,4 @@
-fetch('ancient-brook-82501.herokuapp.com/getdata').then(function(response){
+fetch('/getdata').then(function(response){
   return response.json();
  }).then(function(jsondata){
   console.log(jsondata);
@@ -8,7 +8,7 @@ fetch('ancient-brook-82501.herokuapp.com/getdata').then(function(response){
     upgradeDb.createObjectStore('feeds',{keyPath:'pk'});
    });
 
-fetch('ancient-brook-82501.herokuapp.com/getdata').then(function(response){
+fetch('/getdata').then(function(response){
   return response.json();
  }).then(function(jsondata){
   dbPromise.then(function(db){
